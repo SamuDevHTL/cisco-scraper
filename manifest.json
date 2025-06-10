@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Cisco Exam Answer Helper",
+  "version": "1.0",
+  "description": "Get answers for Cisco exam questions from ITExamAnswers.net",
+  "permissions": [
+    "activeTab",
+    "clipboardRead",
+    "*://itexamanswers.net/*",
+    "*://www.google.com/*",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://itexamanswers.net/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cisco-exam-helper@example.com"
+    }
+  }
+} 

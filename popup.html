@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cisco Exam Answer Helper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 8px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      display: none;
+    }
+    .answer {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .explanation {
+      margin-top: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cisco Exam Answer Helper</h2>
+    <button id="getAnswer">Get Answer</button>
+    <div id="result">
+      <div class="answer" id="answer"></div>
+      <div class="explanation" id="explanation"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
